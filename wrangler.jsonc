@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "kaleido-web",
+  "compatibility_date": "2026-06-29",
+  "main": "./worker/index.ts",
+  "assets": {
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "r2_buckets": [
+    {
+      "binding": "KALEIDO_BUCKET",
+      "bucket_name": "kaleido-bucket"
+    }
+  ],
+  "secrets": {
+    "required": [
+      "BACKEND_DOMAIN",
+      "CF_ACCESS_CLIENT_ID",
+      "CF_ACCESS_CLIENT_SECRET",
+      "R2_ACCESS_KEY_ID",
+      "R2_BUCKET_NAME",
+      "R2_ENDPOINT",
+      "R2_SECRET_ACCESS_KEY"
+    ]
+  }
+}
