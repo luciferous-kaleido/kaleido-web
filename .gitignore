@@ -138,3 +138,4 @@ tmp/
 .wrangler
 .dev.vars*
 worker-configuration.d.ts
+settings.local.json
