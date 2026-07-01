@@ -13,6 +13,9 @@ function App() {
     <>
       <h1>Test2</h1>
       <p>
+        <img alt="" src="https://img.kaleido.luciferous.app/image.jpg" />
+      </p>
+      <p>
         <button type="button" onClick={() => setJson(null)}>
           clear
         </button>
