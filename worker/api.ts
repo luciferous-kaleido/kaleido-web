@@ -1,5 +1,6 @@
 import { Hono } from "hono";
 
+import { routeGetMaster } from "@worker/routes/get-master";
 import { routeHealth } from "@worker/routes/health";
 
 import type { AppEnv } from "./types";
@@ -7,3 +8,4 @@ import type { AppEnv } from "./types";
 export const api = new Hono<AppEnv>();
 
 api.route("/health", routeHealth);
+api.route("/get-master", routeGetMaster);

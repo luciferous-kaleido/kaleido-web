@@ -4,7 +4,9 @@ function App() {
   const [json, setJson] = useState<string | null>(null);
 
   async function getHealth() {
-    const resp = await fetch("/api/health");
+    const resp = await fetch("/api/get-master", {
+      method: "POST",
+    });
     const body = await resp.json();
     setJson(JSON.stringify(body));
   }
